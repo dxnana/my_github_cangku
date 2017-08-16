@@ -116,7 +116,7 @@ export default {
 
 <style scoped>
 
- @import "../static/css/reset.css"; 
+@import "../static/css/reset.css"; 
 header{
     width: 100%;
     z-index: 999;

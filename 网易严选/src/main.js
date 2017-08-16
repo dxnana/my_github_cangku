@@ -12,6 +12,9 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'//引入轮播图组件
 //引入组件
 import homepage from "./pages/homePage.vue"
 import jujia from "./pages/homeLink/jujia.vue"
+
+import jujia_inner from "./pages/homeLink/jujia_in/jujia_inner.vue"
+
 import canchu from "./pages/homeLink/canchu.vue"
 import peijian from "./pages/homeLink/peijian.vue"
 import fuzhuang from "./pages/homeLink/fuzhuang.vue"
@@ -42,7 +45,11 @@ const routes = [ //3.定义路由映射
         //   {path:'/homepage/other',component:fuzhuang}
         // ]
   },
-    { path: '/jujia', component: jujia },
+    { path: '/jujia', component: jujia ,
+       children:[
+         { path: '/jujia/:path', component: jujia_inner }
+        ]  
+  },
     { path: '/canchu', component: canchu },
     { path: '/peijian', component: peijian },
     { path: '/fuzhuang', component: fuzhuang },
